@@ -126,129 +126,91 @@ body {
     font-size: 2vw;
 }
 
-/* Project Gallery */
-/* Project Gallery Section - Clean Fix */
-/* Project Gallery - Scalable & Balanced Grid */
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Dynamic columns */
-    grid-auto-rows: minmax(300px, auto); /* Consistent row height */
-    gap: 20px;
-    width: 90%;
-    margin: 0 auto;
-    grid-auto-flow: dense; /* Fill gaps intelligently */
-  }
-  
-  .gallery-item {
-    border-radius: 10px;
-    overflow: hidden;
-    aspect-ratio: 1; /* Force square items */
-  }
-  
-  .gallery-item.large {
-    grid-column: span 2; /* Large item spans 2 columns */
-    grid-row: span 1; /* Optional: Span rows if needed */
-  }
-  
-  /* Adjustments for large screens (>1024px) */
-  @media (min-width: 1025px) {
-    .gallery-grid {
-      grid-template-columns: repeat(3, 1fr); /* Fixed 3 columns */
-    }
-  
-    .gallery-item.large {
-      grid-column: span 2; /* Large item spans 2 of 3 columns */
-      grid-row: span 1;
-    }
-  }
-  
-  /* Tablet & Mobile */
-  @media (max-width: 1024px) {
-    .gallery-grid {
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .gallery-grid {
-      grid-template-columns: 1fr; /* Single column on mobile */
-    }
-  
-    .gallery-item.large {
-      grid-column: span 1; /* Reset large item on mobile */
-    }
-  }
-  /*Gallery New */
+/* Project Gallery Section */
 .project-gallery-section {
     padding: 20px 5%;
-    height: auto; /* Remove fixed 100vh to allow natural flow */
+    height: auto; /* Allow natural height */
     min-height: 100vh; /* Ensure it covers the viewport */
-  }
-  
-  .gallery-header {
+}
+
+.gallery-header {
     width: 100%;
     text-align: center;
     margin-bottom: 30px;
-  }
-  
-  .gallery-header h1 {
-    font-size: clamp(2rem, 4vw, 3rem); /* Balanced font scaling */
+}
+
+.gallery-header h1 {
+    font-size: clamp(2rem, 4vw, 3rem); /* Responsive font size */
     margin-bottom: 15px;
-  }
-  
-  .gallery-header .quote {
+}
+
+.gallery-header .quote {
     font-size: clamp(1rem, 2vw, 1.2rem);
     max-width: 600px;
     margin: 0 auto;
-  }
-  
-  .gallery-grid {
+}
+
+.gallery-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 columns by default */
     gap: 15px;
     max-width: 1200px;
     margin: 0 auto;
     padding: 10px;
-  }
-  
-  .gallery-item {
+}
+
+.gallery-item {
     position: relative;
     border-radius: 10px;
     overflow: hidden;
-  }
-  
-  .gallery-item img {
+}
+
+.gallery-item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     aspect-ratio: 1; /* Force square images */
-  }
-  
-  .gallery-item.large {
-    grid-column: span 2; /* Large item spans 2 columns */
-    aspect-ratio: 1; /* Keep it square */
-  }
-  
-  /* Responsive Adjustments */
-  @media (max-width: 1024px) {
+}
+
+/* Main image spans 2 columns, side images span 1 column */
+.gallery-item.large {
+    grid-column: span 2; /* Main image spans 2 columns */
+    grid-row: span 2; /* Main image spans 2 rows */
+    aspect-ratio: auto; /* Allow natural aspect ratio */
+}
+
+/* Side images */
+.gallery-item.side {
+    grid-column: span 1; /* Side images span 1 column */
+    grid-row: span 1; /* Side images span 1 row */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
     .gallery-grid {
-      grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
     }
-    
+
     .gallery-item.large {
-      grid-column: span 2; /* Full width on tablets */
+        grid-column: span 2; /* Full width on tablets */
+        grid-row: span 1; /* Reset row span */
     }
-  }
-  
-  @media (max-width: 768px) {
+
+    .gallery-item.side {
+        grid-column: span 1; /* Side images span 1 column */
+    }
+}
+
+@media (max-width: 768px) {
     .gallery-grid {
-      grid-template-columns: 1fr; /* 1 column on mobile */
+        grid-template-columns: 1fr; /* 1 column on mobile */
     }
-    
-    .gallery-item.large {
-      grid-column: span 1; /* Large item matches single column */
+
+    .gallery-item.large,
+    .gallery-item.side {
+        grid-column: span 1; /* All items span 1 column on mobile */
     }
-  }
+}
 
 /* Project Feature Section */
 .full-page.project-feature-section {
@@ -489,158 +451,200 @@ html {
     box-sizing: border-box;
   }
 
-  /* Mobile-First Adjustments (Add this at the end of your CSS) */
+ /* Mobile-First Adjustments (320x480 and above) */
 @media (max-width: 768px) {
-    /* General Mobile Fixes */
+    /* General Fixes for Full-Page Sections */
     .full-page {
-      height: auto;
-      min-height: 100vh !important; /* Use min-height instead of fixed height */
-      padding: 15% 5% !important;
-      justify-content: flex-start !important;
+      height: auto !important; /* Allow sections to grow naturally */
+      min-height: 100vh !important; /* Ensure sections cover the viewport */
+      padding: 10% 5% !important; /* Reduce padding for smaller screens */
     }
   
     /* Cover Section */
-
-    .cover-section h1 {
-      font-size: 3rem !important;
-      margin-bottom: 1rem !important;
+    .cover-section .container {
+      align-items: flex-start !important; /* Keep Rio Sterling text aligned left */
+      text-align: left !important; /* Keep text alignment for Rio Sterling */
     }
   
-    .cover-section h2 {
-      font-size: 1.5rem !important;
+    .name {
+      font-size: 1.5rem !important; /* Smaller font size for name */
+      text-align: left !important; /* Ensure Rio Sterling stays left-aligned */
+    }
+  
+    .portfolio-title {
+      font-size: 2.5rem !important; /* Smaller font size for title */
+      margin-bottom: 1.5rem !important;
+      text-align: left !important; /* Keep title aligned left */
     }
   
     .image-container img {
       width: 100% !important;
-      margin-top: 2rem;
+      height: auto !important;
     }
   
     /* About Section */
     .about-container {
-      flex-direction: column;
-      gap: 2rem !important;
-      padding: 2rem 0 !important;
+      flex-direction: column !important;
+      gap: 1.5rem !important;
     }
   
     .about-container img {
       width: 80% !important;
-      max-width: 300px !important;
+      max-width: 250px !important; /* Smaller image for small screens */
     }
   
     .about-text {
       width: 100% !important;
-      font-size: 1.1rem !important;
-      text-align: center !important;
+      font-size: 1rem !important; /* Smaller font size for text */
+      text-align: left !important; /* Keep about text aligned left */
     }
   
     /* Design Focus Section */
     .focus-container {
-      flex-direction: column;
-      gap: 2rem !important;
+      flex-direction: column !important;
+      gap: 1.5rem !important;
     }
   
     .focus-card {
       width: 100% !important;
-      margin-bottom: 1rem;
     }
   
     .focus-card h2 {
-      font-size: 1.5rem !important;
+      font-size: 1.2rem !important; /* Smaller font size for headings */
     }
   
     .focus-card p {
-      font-size: 1rem !important;
+      font-size: 0.9rem !important; /* Smaller font size for descriptions */
     }
   
     /* Project Gallery */
     .gallery-grid {
-      grid-template-columns: 1fr !important;
-      gap: 1rem;
+      grid-template-columns: 1fr !important; /* Single column for small screens */
+      gap: 1rem !important;
     }
   
     .gallery-item {
-      aspect-ratio: 1;
-      min-height: 250px;
+      aspect-ratio: 1; /* Ensure square items */
+      min-height: 200px; /* Minimum height for small screens */
+    }
+  
+    .gallery-item.large {
+      grid-column: span 1 !important; /* Reset large item on small screens */
     }
   
     /* Project Feature Sections */
     .project-feature-section {
       flex-direction: column !important;
-      justify-content: center !important;
-      gap: 2rem !important;
-      padding: 20% 5% !important;
+      gap: 1.5rem !important;
+      padding: 10% 5% !important; /* Reduce padding for small screens */
     }
   
     .project-feature-content {
       max-width: 100% !important;
-      text-align: center !important;
+      text-align: left !important; /* Keep project text aligned left */
     }
   
     .project-number {
       position: relative !important;
       top: auto !important;
       left: auto !important;
-      font-size: 1.2rem !important;
-      margin-bottom: 1rem;
+      font-size: 1rem !important; /* Smaller font size for project numbers */
+      margin-bottom: 0.5rem !important;
     }
   
     .project-feature-content h1 {
-      font-size: 2rem !important;
+      font-size: 1.8rem !important; /* Smaller font size for headings */
     }
   
     .project-feature-content p {
-      font-size: 1rem !important;
+      font-size: 0.9rem !important; /* Smaller font size for descriptions */
     }
   
     .project-feature-image img,
     .project-feature-image-5 img,
     .project-feature-image-6 img,
     .project-feature-image-7 img {
-      height: 50vh !important;
-      max-height: 400px;
+      height: 40vh !important; /* Smaller height for images */
+      max-height: 300px !important;
+    }
+  
+    /* Contact Section */
+    .contact-section {
+      min-height: 100vh !important; /* Ensure contact section covers the viewport */
+      padding: 10% 5% !important; /* Reduce padding for small screens */
+    }
+  
+    .contact-heading {
+      font-size: 2rem !important; /* Smaller font size for heading */
+      margin-bottom: 1.5rem !important;
+    }
+  
+    .contact-links {
+      flex-direction: column !important;
+      gap: 1rem !important;
+    }
+  
+    .contact-item h3 {
+      font-size: 1rem !important; /* Smaller font size for headings */
+    }
+  
+    .contact-item p {
+      font-size: 0.9rem !important; /* Smaller font size for text */
+    }
+  
+    .contact-icons {
+      margin: 1.5rem 0 !important;
+    }
+  
+    .icon {
+      font-size: 1.5rem !important; /* Smaller icons */
+    }
+  
+    .back-to-top a {
+      font-size: 0.9rem !important; /* Smaller font size for back-to-top link */
+    }
+  }
+  
+  /* Extra Small Screens (320x480 and similar) */
+  @media (max-width: 480px) {
+    /* Cover Section */
+    .portfolio-title {
+      font-size: 2rem !important; /* Even smaller font size for title */
+    }
+  
+    /* About Section */
+    .about-text {
+      font-size: 0.9rem !important; /* Smaller font size for text */
+    }
+  
+    /* Design Focus Section */
+    .focus-card h2 {
+      font-size: 1rem !important; /* Smaller font size for headings */
+    }
+  
+    .focus-card p {
+      font-size: 0.8rem !important; /* Smaller font size for descriptions */
+    }
+  
+    /* Project Feature Sections */
+    .project-feature-content h1 {
+      font-size: 1.5rem !important; /* Smaller font size for headings */
+    }
+  
+    .project-feature-content p {
+      font-size: 0.8rem !important; /* Smaller font size for descriptions */
     }
   
     /* Contact Section */
     .contact-heading {
-      font-size: 2.5rem !important;
-      margin-bottom: 2rem !important;
-    }
-  
-    .contact-links {
-      flex-direction: column;
-      gap: 1.5rem !important;
+      font-size: 1.8rem !important; /* Smaller font size for heading */
     }
   
     .contact-item h3 {
-      font-size: 1.2rem !important;
+      font-size: 0.9rem !important; /* Smaller font size for headings */
     }
   
     .contact-item p {
-      font-size: 1rem !important;
-    }
-  
-    .contact-icons {
-      margin: 2rem 0;
-    }
-  
-    .icon {
-      font-size: 2rem !important;
-    }
-  
-    .back-to-top a {
-      font-size: 1rem !important;
+      font-size: 0.8rem !important; /* Smaller font size for text */
     }
   }
-  
-  /* Height Optimization for Tall Mobile Screens */
-  @media (min-height: 800px) and (max-width: 768px) {
-    .full-page {
-      padding: 10% 5% !important;
-    }
-    
-    .project-feature-image img {
-      height: 60vh !important;
-    }
-  }
-
-  
