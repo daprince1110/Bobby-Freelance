@@ -4,180 +4,172 @@
     --dark-orange: #ff5700;
     --slight-dark-white: #e1e3de;
     --black: #000;
-    
-  }
-  
-  body {
+}
+
+body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: var(--slight-dark-white);
     color: var(--black);
     text-align: center;
-  }
-  
-  /* Full-page sections */
-  .full-page {
+}
+
+/* Full-page sections */
+.full-page {
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     padding: 5%;
-  }
-  
-  /* Cover Section */
-  .cover-section h1 {
+}
+
+/* Cover Section */
+.cover-section h1 {
     font-size: 8vw;
     margin: 0;
-  }
-  
-  .cover-section h2 {
+}
+
+.cover-section h2 {
     font-size: 5vw;
     margin: 10px 0;
-  }
-  
-  .image-container img {
+}
+
+.image-container img {
     width: 80%;
     max-width: 1000px;
     height: auto;
     border-radius: 10px;
-  }
-  
-  /* About Section */
-  .about-section {
+}
+
+/* About Section */
+.about-section {
     background-color: var(--slight-dark-white);
-  }
-  
-  .about-container {
+}
+
+.about-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 90%;
     height: 100%;
     gap: 5%;
-  }
-  
-  .about-container img {
+}
+
+.about-container img {
     width: 45%;
     max-width: 700px;
     height: auto;
     border-radius: 10px;
-  }
-  
-  .about-text {
+}
+
+.about-text {
     width: 45%;
     font-size: 3vw;
     text-align: left;
-  }
-  
-  .highlight {
+}
+
+.highlight {
     color: var(--pink);
     font-weight: bold;
-  }
-  
+}
 
 /* Design Focus Section */
 .design-focus-section {
     background-color: var(--orange);
     color: white;
-  }
-  
-  .design-focus-section h1 {
+}
+
+.design-focus-section h1 {
     font-size: 6vw;
-  }
-  
-  .focus-container {
+}
+
+.focus-container {
     display: flex;
     justify-content: center;
     gap: 5%;
     width: 90%;
-  }
-  
-  .focus-card {
+}
+
+.focus-card {
     width: 30%;
     text-align: center;
-  }
-  
-  .focus-card img {
+}
+
+.focus-card img {
     width: 100%;
     border-radius: 10px;
-  }
-  
-  .focus-card h2 {
+}
+
+.focus-card h2 {
     font-size: 3vw;
     margin-top: 10px;
-  }
-  
-  .focus-card p {
-    font-size: 2vw;
-  }
+}
 
-/* Fourth Section: Project Gallery */
+.focus-card p {
+    font-size: 2vw;
+}
+
+/* Project Gallery */
 .project-gallery-section {
-    background-color: var(--slight-dark-white); /* Adjust as needed */
+    background-color: var(--slight-dark-white);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh; /* Full-page height */
+    height: 100vh;
     padding: 5%;
-  }
-  
-  /* Header styling */
-  .gallery-header {
+}
+
+.gallery-header {
     width: 90%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 3%;
-  }
-  
-  .gallery-header h1 {
+}
+
+.gallery-header h1 {
     font-size: 6vw;
     margin: 0;
-  }
-  
-  .gallery-header .quote {
+}
+
+.gallery-header .quote {
     font-size: 2.5vw;
     text-align: right;
     max-width: 50%;
     margin: 0;
-  }
-  
-  /* Grid layout for images */
-  .gallery-grid {
+}
+
+.gallery-grid {
     width: 90%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
     gap: 2%;
-  }
-  
-  /* Image items */
-  .gallery-item {
+}
+
+.gallery-item {
     border-radius: 10px;
     overflow: hidden;
-  }
-  
-  .gallery-item img {
+}
+
+.gallery-item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-  }
-  
-  /* Make first image larger */
-  .gallery-item.large {
+}
+
+.gallery-item.large {
     grid-column: span 2;
     grid-row: span 2;
-  }
+}
 
-
-
-  /* Fifth Project Feature Section */
-  .full-page.project-feature-section {
-    background-color: var(--dark-orange); /* Retain dark orange background */
-    color: #000; /* Black text */
+/* Project Feature Section */
+.full-page.project-feature-section {
+    background-color: var(--dark-orange);
+    color: #000;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -186,61 +178,53 @@
     height: 100vh;
     width: 100%;
     box-sizing: border-box;
-    position: relative; /* Ensures child elements with absolute positioning stay inside */
-  }
-  
-  /* Ensures Project #1 text stays in the top-left corner */
-  .project-number {
+    position: relative;
+}
+
+.project-number {
     position: absolute;
     top: 20px;
     left: 20px;
     font-size: 1.8vw;
     font-weight: bold;
     color: #000;
-  }
-  
-  /* Container for text content */
-  .project-feature-content {
+}
+
+.project-feature-content {
     flex: 1;
     text-align: left;
     max-width: 50%;
-  }
-  
-  /* Styling for heading and description */
-  .project-feature-content h1 {
+}
+
+.project-feature-content h1 {
     font-size: 4vw;
     margin-bottom: 1vw;
-  }
-  
-  .project-feature-content p {
+}
+
+.project-feature-content p {
     font-size: 2vw;
-  }
-  
-  /* Ensures the image is on the right */
-  .project-feature-image {
+}
+
+.project-feature-image {
     flex: 1;
     display: flex;
     justify-content: flex-end;
-  }
-  
-  /* Image settings */
-  .project-feature-image img {
+}
+
+.project-feature-image img {
     width: 100%;
     max-width: 100%;
-    height: 80vh; /* Takes up most of the section */
-    object-fit: cover; /* Ensures it fills the space */
+    height: 80vh;
+    object-fit: cover;
     border-radius: 10px;
-  }
+}
 
-
-
-  
-/*Section 6*/
+/* Section 6 */
 .full-page.project-feature-section-6 {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #ff3d4f; /* Match red background */
+    background-color: #ff3d4f;
     padding: 5vw;
     height: 100vh;
 }
@@ -276,14 +260,12 @@
     background-color: var(--pink) !important;
 }
 
-
-/*Section 7*/
-/* Section 7 – Clone of Section 6 with Scaled-Up Content */
+/* Section 7 */
 .full-page.project-feature-section-7 {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: var(--slight-dark-white); /* Entire section background is slight-dark-white */
+    background-color: var(--slight-dark-white);
     padding: 5vw;
     height: 100vh;
     position: relative;
@@ -299,17 +281,17 @@
     position: absolute;
     top: 20px;
     left: 20px;
-    font-size: 2vw; /* Increased from previous size */
+    font-size: 2vw;
     font-weight: bold;
 }
 
 .project-feature-content-7 h1 {
-    font-size: 6vw; /* Scaled up heading */
+    font-size: 6vw;
     margin: 1vw 0;
 }
 
 .project-feature-content-7 .project-description-7 {
-    font-size: 3vw; /* Scaled up description text */
+    font-size: 3vw;
     line-height: 1.3;
 }
 
@@ -320,7 +302,6 @@
     align-items: center;
 }
 
-/* Image styling remains similar */
 .project-feature-image-7 img {
     width: 90%;
     max-width: 600px;
@@ -328,19 +309,17 @@
     border-radius: 10px;
 }
 
-/* Override background using the root variable for pink – for Section 7 */
 .project-7 {
     background-color: var(--slight-dark-white) !important;
 }
 
-
-/* Last Section - Contact */
+/* Contact Section */
 .full-page.contact-section {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #ff3d4f; /* Red background */
+    background-color: #ff3d4f;
     padding: 5vw;
     height: 100vh;
     text-align: center;
@@ -394,4 +373,125 @@
 
 .back-to-top a:hover {
     text-decoration: underline;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+    .full-page {
+        padding: 10%;
+        height: auto;
+    }
+
+    .cover-section h1 {
+        font-size: 12vw;
+    }
+
+    .cover-section h2 {
+        font-size: 7vw;
+    }
+
+    .image-container img {
+        width: 95%;
+    }
+
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-container img,
+    .about-text {
+        width: 100%;
+    }
+
+    .about-text {
+        font-size: 5vw;
+    }
+
+    .focus-container {
+        flex-direction: column;
+        gap: 8%;
+    }
+
+    .focus-card {
+        width: 90%;
+    }
+
+    .focus-card h2 {
+        font-size: 5vw;
+    }
+
+    .focus-card p {
+        font-size: 3.5vw;
+    }
+
+    .gallery-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .gallery-header h1 {
+        font-size: 7vw;
+    }
+
+    .gallery-header .quote {
+        font-size: 3.5vw;
+        max-width: 80%;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-item.large {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+
+    .project-feature-section,
+    .project-feature-section-6,
+    .project-feature-section-7 {
+        flex-direction: column;
+        text-align: center;
+        height: auto;
+        padding: 10% 5%;
+    }
+
+    .project-feature-content,
+    .project-feature-content-6,
+    .project-feature-content-7 {
+        max-width: 100%;
+    }
+
+    .project-feature-image,
+    .project-feature-image-6,
+    .project-feature-image-7 {
+        justify-content: center;
+        margin-top: 5%;
+    }
+
+    .project-feature-image img,
+    .project-feature-image-6 img,
+    .project-feature-image-7 img {
+        width: 100%;
+        height: auto;
+    }
+
+    .contact-links {
+        flex-direction: column;
+        gap: 5%;
+    }
+
+    .contact-icons {
+        flex-direction: column;
+        gap: 3%;
+    }
+
+    .icon {
+        font-size: 5vw;
+    }
+
+    .back-to-top a {
+        font-size: 3.5vw;
+    }
 }
