@@ -1,0 +1,397 @@
+:root {
+    --pink: #ff3b4b;
+    --orange: #ff4500;
+    --dark-orange: #ff5700;
+    --slight-dark-white: #e1e3de;
+    --black: #000;
+    
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--slight-dark-white);
+    color: var(--black);
+    text-align: center;
+  }
+  
+  /* Full-page sections */
+  .full-page {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 5%;
+  }
+  
+  /* Cover Section */
+  .cover-section h1 {
+    font-size: 8vw;
+    margin: 0;
+  }
+  
+  .cover-section h2 {
+    font-size: 5vw;
+    margin: 10px 0;
+  }
+  
+  .image-container img {
+    width: 80%;
+    max-width: 1000px;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  /* About Section */
+  .about-section {
+    background-color: var(--slight-dark-white);
+  }
+  
+  .about-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    height: 100%;
+    gap: 5%;
+  }
+  
+  .about-container img {
+    width: 45%;
+    max-width: 700px;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .about-text {
+    width: 45%;
+    font-size: 3vw;
+    text-align: left;
+  }
+  
+  .highlight {
+    color: var(--pink);
+    font-weight: bold;
+  }
+  
+
+/* Design Focus Section */
+.design-focus-section {
+    background-color: var(--orange);
+    color: white;
+  }
+  
+  .design-focus-section h1 {
+    font-size: 6vw;
+  }
+  
+  .focus-container {
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+    width: 90%;
+  }
+  
+  .focus-card {
+    width: 30%;
+    text-align: center;
+  }
+  
+  .focus-card img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  .focus-card h2 {
+    font-size: 3vw;
+    margin-top: 10px;
+  }
+  
+  .focus-card p {
+    font-size: 2vw;
+  }
+
+/* Fourth Section: Project Gallery */
+.project-gallery-section {
+    background-color: var(--slight-dark-white); /* Adjust as needed */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Full-page height */
+    padding: 5%;
+  }
+  
+  /* Header styling */
+  .gallery-header {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3%;
+  }
+  
+  .gallery-header h1 {
+    font-size: 6vw;
+    margin: 0;
+  }
+  
+  .gallery-header .quote {
+    font-size: 2.5vw;
+    text-align: right;
+    max-width: 50%;
+    margin: 0;
+  }
+  
+  /* Grid layout for images */
+  .gallery-grid {
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 2%;
+  }
+  
+  /* Image items */
+  .gallery-item {
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Make first image larger */
+  .gallery-item.large {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+
+
+
+  /* Fifth Project Feature Section */
+  .full-page.project-feature-section {
+    background-color: var(--dark-orange); /* Retain dark orange background */
+    color: #000; /* Black text */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5%;
+    height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative; /* Ensures child elements with absolute positioning stay inside */
+  }
+  
+  /* Ensures Project #1 text stays in the top-left corner */
+  .project-number {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 1.8vw;
+    font-weight: bold;
+    color: #000;
+  }
+  
+  /* Container for text content */
+  .project-feature-content {
+    flex: 1;
+    text-align: left;
+    max-width: 50%;
+  }
+  
+  /* Styling for heading and description */
+  .project-feature-content h1 {
+    font-size: 4vw;
+    margin-bottom: 1vw;
+  }
+  
+  .project-feature-content p {
+    font-size: 2vw;
+  }
+  
+  /* Ensures the image is on the right */
+  .project-feature-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  /* Image settings */
+  .project-feature-image img {
+    width: 100%;
+    max-width: 100%;
+    height: 80vh; /* Takes up most of the section */
+    object-fit: cover; /* Ensures it fills the space */
+    border-radius: 10px;
+  }
+
+
+
+  
+/*Section 6*/
+.full-page.project-feature-section-6 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ff3d4f; /* Match red background */
+    padding: 5vw;
+    height: 100vh;
+}
+
+.project-feature-content-6 {
+    flex: 1;
+    max-width: 40%;
+    color: black;
+}
+
+.project-number-6 {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.project-feature-image-6 {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.project-feature-image-6 img {
+    width: 90%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.project-6 {
+    background-color: var(--pink) !important;
+}
+
+
+/*Section 7*/
+/* Section 7 – Clone of Section 6 with Scaled-Up Content */
+.full-page.project-feature-section-7 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--slight-dark-white); /* Entire section background is slight-dark-white */
+    padding: 5vw;
+    height: 100vh;
+    position: relative;
+}
+
+.project-feature-content-7 {
+    flex: 1;
+    max-width: 40%;
+    color: black;
+}
+
+.project-number-7 {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 2vw; /* Increased from previous size */
+    font-weight: bold;
+}
+
+.project-feature-content-7 h1 {
+    font-size: 6vw; /* Scaled up heading */
+    margin: 1vw 0;
+}
+
+.project-feature-content-7 .project-description-7 {
+    font-size: 3vw; /* Scaled up description text */
+    line-height: 1.3;
+}
+
+.project-feature-image-7 {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/* Image styling remains similar */
+.project-feature-image-7 img {
+    width: 90%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Override background using the root variable for pink – for Section 7 */
+.project-7 {
+    background-color: var(--slight-dark-white) !important;
+}
+
+
+/* Last Section - Contact */
+.full-page.contact-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ff3d4f; /* Red background */
+    padding: 5vw;
+    height: 100vh;
+    text-align: center;
+    color: white;
+}
+
+.contact-heading {
+    font-size: 6vw;
+    font-weight: bold;
+    margin-bottom: 3vw;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 5vw;
+    width: 100%;
+    max-width: 80%;
+    margin-bottom: 3vw;
+}
+
+.contact-item h3 {
+    font-size: 2vw;
+    font-weight: bold;
+    margin-bottom: 0.5vw;
+}
+
+.contact-item p {
+    font-size: 2vw;
+}
+
+.contact-icons {
+    display: flex;
+    gap: 2vw;
+    margin-bottom: 3vw;
+}
+
+.icon {
+    font-size: 3vw;
+}
+
+.back-to-top {
+    margin-top: 2vw;
+}
+
+.back-to-top a {
+    font-size: 2vw;
+    color: white;
+    text-decoration: none;
+}
+
+.back-to-top a:hover {
+    text-decoration: underline;
+}
