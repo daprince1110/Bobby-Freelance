@@ -10,7 +10,7 @@
 
    .responsive-smaller {
         height: auto !important; /* Allow sections to grow naturally */
-        min-height: 60vh !important; /* Ensure sections cover the viewport */
+        min-height: 100vh !important; /* Ensure sections cover the viewport */
         padding: 10% 5% !important; /* Reduce padding for smaller screens */
     }
   
