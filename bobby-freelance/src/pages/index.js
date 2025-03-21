@@ -4,27 +4,29 @@ import Link from 'next/link';
 import Head from 'next/head';
 import Image from 'next/image';
 
-export async function getStaticProps() {
+import fs from 'fs';
+import path from 'path';
+
+export async function getServerSideProps() {
   const projectsDir = path.join(process.cwd(), 'Projects');
   const projectFolders = fs.readdirSync(projectsDir, { withFileTypes: true })
     .filter(dirent => dirent.isDirectory())
     .map(dirent => {
       const projectPath = path.join(projectsDir, dirent.name);
       const images = fs.readdirSync(projectPath).filter(file => file.match(/\.(png|jpg|jpeg|gif)$/));
-      // Always prefix with "/" to form a proper relative URL.
       const imagePath = images.length > 0 ? `/Projects/${dirent.name}/${images[0]}` : 'https://placehold.co/600x600';
+      
       return {
         name: dirent.name,
-        image: imagePath
+        image: imagePath,
       };
     });
 
   return {
-    props: {
-      projects: projectFolders,
-    },
+    props: { projectFolders },
   };
 }
+
 
 export default function Home({ projects = [] }) {
   return (
