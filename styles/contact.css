@@ -1,0 +1,61 @@
+/* Contact Section */
+.full-page.contact-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ff3d4f;
+    padding: 5vw;
+    height: 100vh;
+    text-align: center;
+    color: white;
+  }
+  
+  .contact-heading {
+    font-size: 6vw;
+    font-weight: bold;
+    margin-bottom: 3vw;
+  }
+  
+  .contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 5vw;
+    width: 100%;
+    max-width: 80%;
+    margin-bottom: 3vw;
+  }
+  
+  .contact-item h3 {
+    font-size: 2vw;
+    font-weight: bold;
+    margin-bottom: 0.5vw;
+  }
+  
+  .contact-item p {
+    font-size: 2vw;
+  }
+  
+  .contact-icons {
+    display: flex;
+    gap: 2vw;
+    margin-bottom: 3vw;
+  }
+  
+  .icon {
+    font-size: 3vw;
+  }
+  
+  .back-to-top {
+    margin-top: 2vw;
+  }
+  
+  .back-to-top a {
+    font-size: 2vw;
+    color: white;
+    text-decoration: none;
+  }
+  
+  .back-to-top a:hover {
+    text-decoration: underline;
+  }

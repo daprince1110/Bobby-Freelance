@@ -1,0 +1,44 @@
+  /* Extra Small Screens (320x480 and similar) */
+
+@media (max-width: 480px) {
+    /* Cover Section */
+    .portfolio-title {
+      font-size: 2rem !important; /* Even smaller font size for title */
+    }
+  
+    /* About Section */
+    .about-text {
+      font-size: 0.9rem !important; /* Smaller font size for text */
+    }
+  
+    /* Design Focus Section */
+    .focus-card h2 {
+      font-size: 1rem !important; /* Smaller font size for headings */
+    }
+  
+    .focus-card p {
+      font-size: 0.8rem !important; /* Smaller font size for descriptions */
+    }
+  
+    /* Project Feature Sections */
+    .project-feature-content h1 {
+      font-size: 1.5rem !important; /* Smaller font size for headings */
+    }
+  
+    .project-feature-content p {
+      font-size: 0.8rem !important; /* Smaller font size for descriptions */
+    }
+  
+    /* Contact Section */
+    .contact-heading {
+      font-size: 1.8rem !important; /* Smaller font size for heading */
+    }
+  
+    .contact-item h3 {
+      font-size: 0.9rem !important; /* Smaller font size for headings */
+    }
+  
+    .contact-item p {
+      font-size: 0.8rem !important; /* Smaller font size for text */
+    }
+  }

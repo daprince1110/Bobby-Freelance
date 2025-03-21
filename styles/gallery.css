@@ -1,0 +1,86 @@
+
+/* Project Gallery Section */
+.project-gallery-section {
+    padding: 20px 5%;
+    height: auto; /* Allow natural height */
+    min-height: 100vh; /* Ensure it covers the viewport */
+  }
+  
+  .gallery-header {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .gallery-header h1 {
+    font-size: clamp(2rem, 4vw, 3rem); /* Responsive font size */
+    margin-bottom: 15px;
+  }
+  
+  .gallery-header .quote {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns by default */
+    gap: 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+  }
+  
+  .gallery-item {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 1; /* Force square images */
+  }
+  
+  /* Main image spans 2 columns, side images span 1 column */
+  .gallery-item.large {
+    grid-column: span 2; /* Main image spans 2 columns */
+    grid-row: span 2; /* Main image spans 2 rows */
+    aspect-ratio: auto; /* Allow natural aspect ratio */
+  }
+  
+  /* Side images */
+  .gallery-item.side {
+    grid-column: span 1; /* Side images span 1 column */
+    grid-row: span 1; /* Side images span 1 row */
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 1024px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+    }
+  
+    .gallery-item.large {
+        grid-column: span 2; /* Full width on tablets */
+        grid-row: span 1; /* Reset row span */
+    }
+  
+    .gallery-item.side {
+        grid-column: span 1; /* Side images span 1 column */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: 1fr; /* 1 column on mobile */
+    }
+  
+    .gallery-item.large,
+    .gallery-item.side {
+        grid-column: span 1; /* All items span 1 column on mobile */
+    }
+  }

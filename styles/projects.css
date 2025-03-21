@@ -1,0 +1,83 @@
+/* Project Feature Section */
+.full-page.project-feature-section {
+    background-color: var(--dark-orange);
+    color: #000;
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: space-between;
+    padding: 5%;
+    height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+
+  }
+  
+  .project-number {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 1.8vw;
+    font-weight: bold;
+    color: #000;
+  }
+  
+  .project-feature-content {
+    flex: 1;
+    text-align: left;
+    max-width: 50%;
+  }
+  
+  .project-feature-content h1 {
+    font-size: 4vw;
+    margin-bottom: 1vw;
+  }
+  
+  .project-feature-content p {
+    font-size: 2vw;
+  }
+  
+  .project-feature-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .project-feature-image img {
+    width: 100%;
+    max-width: 100%;
+    height: 80vh;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  .project-feature-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    object-fit: cover;
+}
+
+.project-number {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 2vw;
+    font-weight: bold;
+}
+      
+
+  /*Project 1*/
+  .project-1{
+    background-color: var(--dark-orange);
+  }
+
+  .project-2 {
+    background-color: var(--pink) !important;
+  }
+
+  .project-3{
+    background-color: var(--slight-dark-white) !important;
+  }

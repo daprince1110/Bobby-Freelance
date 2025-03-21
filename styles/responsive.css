@@ -1,0 +1,156 @@
+/* Mobile-First Adjustments (320x480 and above) */
+@media (max-width: 768px) {
+
+    /* General Fixes for Full-Page Sections */
+    .full-page {
+      height: auto !important; /* Allow sections to grow naturally */
+      min-height: 100vh !important; /* Ensure sections cover the viewport */
+      padding: 10% 5% !important; /* Reduce padding for smaller screens */
+    }
+  
+    /* Cover Section */
+    .cover-section .container {
+      align-items: flex-start !important; /* Keep Rio Sterling text aligned left */
+      text-align: left !important; /* Keep text alignment for Rio Sterling */
+    }
+  
+    .name {
+      font-size: 1.5rem !important; /* Smaller font size for name */
+      text-align: left !important; /* Ensure Rio Sterling stays left-aligned */
+    }
+  
+    .portfolio-title {
+      font-size: 2.5rem !important; /* Smaller font size for title */
+      margin-bottom: 1.5rem !important;
+      text-align: left !important; /* Keep title aligned left */
+    }
+  
+    .image-container img {
+      width: 100% !important;
+      height: auto !important;
+    }
+
+  
+    /* About Section */
+    .about-container {
+      flex-direction: column !important;
+      gap: 1.5rem !important;
+    }
+  
+    .about-container img {
+      width: 80% !important;
+      max-width: 250px !important; /* Smaller image for small screens */
+    }
+  
+    .about-text {
+      width: 100% !important;
+      font-size: 2rem !important; /* Smaller font size for text */
+      text-align: left !important; /* Keep about text aligned left */
+    }
+  
+
+    /* Design Focus Section */
+    .focus-container {
+      flex-direction: column !important;
+      gap: 1.5rem !important;
+    }
+  
+    .focus-card {
+      width: 100% !important;
+    }
+  
+    .focus-card h2 {
+      font-size: 1.2rem !important; /* Smaller font size for headings */
+    }
+  
+    .focus-card p {
+      font-size: 0.9rem !important; /* Smaller font size for descriptions */
+    }
+
+  
+    /* Project Gallery */
+    .gallery-grid {
+      grid-template-columns: 1fr !important; /* Single column for small screens */
+      gap: 1rem !important;
+    }
+  
+    .gallery-item {
+      aspect-ratio: 1; /* Ensure square items */
+      min-height: 200px; /* Minimum height for small screens */
+    }
+  
+    .gallery-item.large {
+      grid-column: span 1 !important; /* Reset large item on small screens */
+    }
+
+  
+    /* Project Feature Sections */
+    .project-feature-section {
+      flex-direction: column !important;
+      gap: 1.5rem !important;
+      padding: 10% 5% !important; /* Reduce padding for small screens */
+    }
+  
+    .project-feature-content {
+      max-width: 100% !important;
+      text-align: left !important; /* Keep project text aligned left */
+    }
+  
+    .project-number {
+        font-size: 1.2rem !important; /* Smaller font size for project numbers */
+    }
+  
+    .project-feature-content h1 {
+      font-size: 3rem !important; /* Smaller font size for headings */
+    }
+    .project-feature-content p {
+        font-size: 0.9rem !important; /* Smaller font size for descriptions */
+      }
+  
+    .project-feature-image img{
+      height: 40vh !important; /* Smaller height for images */
+      max-height: 300px !important;
+    }
+
+    .full-page .project-feature-content .project-description{
+        font-size:1.5rem !important;
+    }
+  
+    /* Contact Section */
+    .contact-section {
+      min-height: 100vh !important; /* Ensure contact section covers the viewport */
+      padding: 10% 5% !important; /* Reduce padding for small screens */
+    }
+  
+    .contact-heading {
+      font-size: 2rem !important; /* Smaller font size for heading */
+      margin-bottom: 1.5rem !important;
+    }
+  
+    .contact-links {
+      flex-direction: column !important;
+      gap: 1rem !important;
+    }
+  
+    .contact-item h3 {
+      font-size: 1rem !important; /* Smaller font size for headings */
+    }
+  
+    .contact-item p {
+      font-size: 0.9rem !important; /* Smaller font size for text */
+    }
+  
+    .contact-icons {
+      margin: 1.5rem 0 !important;
+    }
+  
+    .icon {
+      font-size: 1.5rem !important; /* Smaller icons */
+    }
+  
+    .back-to-top a {
+      font-size: 0.9rem !important; /* Smaller font size for back-to-top link */
+    }
+  }
+  
+

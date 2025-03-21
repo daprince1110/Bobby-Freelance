@@ -1,0 +1,32 @@
+/* Cover Section Fix */
+.cover-section .container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+  .name {
+    font-size: clamp(1rem, 2vw, 1.8rem); /* Small size */
+    font-weight: 400;
+    margin: 0 0 1rem 0; /* Space below name */
+    text-align: left;
+  }
+  
+  .portfolio-title {
+    font-size: clamp(3rem, 8vw, 6rem); /* Large size */
+    font-weight: bold;
+    margin: 0 0 3rem 0; /* Space below title */
+    width: 100%;
+    text-align: left;
+  }
+  
+  .image-container {
+    width: 100%;
+  }
+  
+  .image-container img {
+    width: 100%;
+    height: auto;
+  }
