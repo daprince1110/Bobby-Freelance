@@ -3,9 +3,15 @@
 
     /* General Fixes for Full-Page Sections */
     .full-page {
-      height: auto !important; /* Allow sections to grow naturally */
-      min-height: 100vh !important; /* Ensure sections cover the viewport */
-      padding: 10% 5% !important; /* Reduce padding for smaller screens */
+      height: auto ; /* Allow sections to grow naturally */
+      min-height: 100vh ; /* Ensure sections cover the viewport */
+      padding: 10% 5% ; /* Reduce padding for smaller screens */
+    }
+
+   .responsive-smaller {
+        height: auto !important; /* Allow sections to grow naturally */
+        min-height: 60vh !important; /* Ensure sections cover the viewport */
+        padding: 10% 5% !important; /* Reduce padding for smaller screens */
     }
   
     /* Cover Section */
@@ -54,17 +60,21 @@
       flex-direction: column !important;
       gap: 1.5rem !important;
     }
+
+    .design-focus-section h1{
+        font-size:3rem;
+    }
   
     .focus-card {
       width: 100% !important;
     }
   
     .focus-card h2 {
-      font-size: 1.2rem !important; /* Smaller font size for headings */
+      font-size: 1.7rem !important; /* Smaller font size for headings */
     }
   
     .focus-card p {
-      font-size: 0.9rem !important; /* Smaller font size for descriptions */
+      font-size: 1.2rem !important; /* Smaller font size for descriptions */
     }
 
   
@@ -94,6 +104,7 @@
     .project-feature-content {
       max-width: 100% !important;
       text-align: left !important; /* Keep project text aligned left */
+      flex:0 1 auto;
     }
   
     .project-number {
@@ -104,12 +115,14 @@
       font-size: 3rem !important; /* Smaller font size for headings */
     }
     .project-feature-content p {
-        font-size: 0.9rem !important; /* Smaller font size for descriptions */
-      }
+        font-size: 0.9rem !important; 
+    }
   
     .project-feature-image img{
+
       height: 40vh !important; /* Smaller height for images */
       max-height: 300px !important;
+      flex:0 1 auto;
     }
 
     .full-page .project-feature-content .project-description{
@@ -118,8 +131,9 @@
   
     /* Contact Section */
     .contact-section {
-      min-height: 100vh !important; /* Ensure contact section covers the viewport */
       padding: 10% 5% !important; /* Reduce padding for small screens */
+      min-height:100% !important;
+      line-height:.5rem;
     }
   
     .contact-heading {
@@ -133,11 +147,11 @@
     }
   
     .contact-item h3 {
-      font-size: 1rem !important; /* Smaller font size for headings */
+      font-size: 2rem !important; /* Smaller font size for headings */
     }
   
     .contact-item p {
-      font-size: 0.9rem !important; /* Smaller font size for text */
+      font-size: 1.3rem !important; /* Smaller font size for text */
     }
   
     .contact-icons {

@@ -8,20 +8,39 @@
   
   .gallery-header {
     width: 100%;
-    text-align: center;
+    text-align: left;
     margin-bottom: 30px;
+    display:flex;
+    justify-content:space-around;
+    align-items: center;
+    align-content: center;
+    
+  }
+
+  @media (max-width: 768px) {
+    .gallery-header{
+      display: block;
+    }
+    .gallery-header h1{
+      font-size:3rem !important;
+    }
+    .gallery-header .quote{
+      font-size:1.5rem !important;
+    }
   }
   
   .gallery-header h1 {
     font-size: clamp(2rem, 4vw, 3rem); /* Responsive font size */
     margin-bottom: 15px;
   }
-  
-  .gallery-header .quote {
-    font-size: clamp(1rem, 2vw, 1.2rem);
-    max-width: 600px;
-    margin: 0 auto;
-  }
+
+.gallery-header .quote {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  max-width: 600px;
+}
+
+
+
   
   .gallery-grid {
     display: grid;
