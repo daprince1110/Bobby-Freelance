@@ -133,17 +133,23 @@
     .contact-section {
       padding: 10% 5% !important; /* Reduce padding for small screens */
       min-height:100% !important;
-      line-height:.5rem;
     }
   
     .contact-heading {
       font-size: 2rem !important; /* Smaller font size for heading */
-      margin-bottom: 1.5rem !important;
+    }
+
+    #footer {
+        line-height:2.5rem !important;
     }
   
     .contact-links {
       flex-direction: column !important;
       gap: 1rem !important;
+    }
+
+    .contact-item{
+        line-height:1rem !important;
     }
   
     .contact-item h3 {
